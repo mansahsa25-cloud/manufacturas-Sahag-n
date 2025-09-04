@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MASAH | Manufacturas Sahagún</title>
-  <meta name="description" content="Empresa mexicana dedicada a la fabricación de muebles estilo industrial. Catálogo, contacto y más."/>
+  <meta name="description" content="Empresa mexicana dedicada a la fabricación de muebles estilo industrial. Catálogo, contacto y más." />
   <style>
     :root {
       --rojo: #e50914;
@@ -14,64 +14,22 @@
     }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: system-ui, sans-serif;
+      color: var(--blanco);
       background: var(--gris-oscuro);
-      color: var(--blanco);
     }
-    header {
-      background: #0b0f1a;
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    header h1 {
-      margin: 0;
-      color: var(--rojo);
-    }
-    header small {
-      color: var(--gris-claro);
-    }
-    nav {
-      margin-top: 0.5rem;
-    }
-    nav a {
-      margin-right: 1rem;
-      color: var(--blanco);
-      text-decoration: none;
-    }
-    section {
-      padding: 2rem 1rem;
-    }
-    h2 {
-      color: var(--rojo);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-    figure {
-      background: #1f2937;
-      border-radius: 8px;
-      overflow: hidden;
-      margin: 0;
-    }
-    figure img {
-      width: 100%;
-      display: block;
-    }
-    figcaption {
-      padding: .5rem;
-      font-size: 0.9rem;
-      color: var(--gris-claro);
-    }
-    footer {
-      background: #0b0f1a;
-      padding: 1rem;
-      text-align: center;
-      color: var(--gris-claro);
-    }
+    header {background: #0b0f1a; padding: 1rem; position: sticky; top: 0;}
+    header h1 {margin: 0; color: var(--rojo);} 
+    header small {color: var(--gris-claro);} 
+    nav {margin-top: .5rem;}
+    nav a {margin-right: 1rem; color: var(--blanco); text-decoration: none;}
+    section {padding: 2rem 1rem;}
+    h2 {color: var(--rojo);}
+    .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;}
+    figure {background: #1f2937; border-radius: 8px; overflow: hidden;}
+    figcaption {padding: .5rem; font-size: .9rem; color: var(--gris-claro);}
+    img {width: 100%; display: block;}
+    footer {background: #0b0f1a; padding: 1rem; text-align: center; color: var(--gris-claro);}
   </style>
 </head>
 <body>
@@ -87,16 +45,33 @@
   <main>
     <section>
       <h2>Empresa mexicana</h2>
-      <p>
-        MASAH — Manufacturas Sahagún — es una empresa mexicana dedicada a la
-        fabricación de muebles estilo industrial. Diseñamos y producimos piezas
-        robustas y funcionales, con acabados profesionales que elevan cualquier espacio.
-      </p>
+      <p>MASAH — Manufacturas Sahagún — es una empresa mexicana dedicada a la fabricación de muebles estilo industrial. Diseñamos y producimos piezas robustas y funcionales, con acabados profesionales que elevan cualquier espacio.</p>
     </section>
 
     <section id="catalogo">
       <h2>Catálogo — Estilo industrial</h2>
-      <div id="catalogoGrid" class="grid"></div>
+      <div class="grid">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200&auto=format&fit=crop" alt="Comedor industrial de madera y acero">
+          <figcaption>Comedor industrial</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1582582429416-1e2a2f0a3f17?q=80&w=1200&auto=format&fit=crop" alt="Banco industrial alto para barra">
+          <figcaption>Banco alto para barra</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" alt="Barras de cocina estilo industrial">
+          <figcaption>Barras estilo industrial</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?q=80&w=1200&auto=format&fit=crop" alt="Sillas industriales metálicas">
+          <figcaption>Sillas industriales</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1200&auto=format&fit=crop" alt="Estantería de acero y madera">
+          <figcaption>Estantería de acero y madera</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section id="contacto">
@@ -112,35 +87,6 @@
   </footer>
 
   <script>
-    // Lista dinámica de imágenes
-    const catalogo = [
-      { url: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200&auto=format&fit=crop", titulo: "Comedor industrial" },
-      { url: "https://images.unsplash.com/photo-1582582429416-1e2a2f0a3f17?q=80&w=1200&auto=format&fit=crop", titulo: "Banco alto para barra" },
-      { url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop", titulo: "Barras de cocina industrial" },
-      { url: "https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?q=80&w=1200&auto=format&fit=crop", titulo: "Sillas industriales" },
-      { url: "https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1200&auto=format&fit=crop", titulo: "Estantería de acero y madera" },
-      { url: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop", titulo: "Mesa de centro industrial" },
-      { url: "https://images.unsplash.com/photo-1600585154340-1e7b9d19e1a5?q=80&w=1200&auto=format&fit=crop", titulo: "Licorero industrial" },
-      { url: "https://images.unsplash.com/photo-1606787366850-de6330128bfc?q=80&w=1200&auto=format&fit=crop", titulo: "Banca de jardín industrial" },
-      { url: "https://images.unsplash.com/photo-1616627453546-bb10c8e57e7e?q=80&w=1200&auto=format&fit=crop", titulo: "Mesa estilo industrial" },
-      { url: "https://images.unsplash.com/photo-1600607687920-4eae98e7c159?q=80&w=1200&auto=format&fit=crop", titulo: "Rack industrial" }
-    ];
-
-    // Renderizado dinámico
-    const grid = document.getElementById("catalogoGrid");
-    catalogo.forEach(item => {
-      const fig = document.createElement("figure");
-      const img = document.createElement("img");
-      img.src = item.url;
-      img.alt = item.titulo;
-      const cap = document.createElement("figcaption");
-      cap.textContent = item.titulo;
-      fig.appendChild(img);
-      fig.appendChild(cap);
-      grid.appendChild(fig);
-    });
-
-    // Año dinámico en footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>

@@ -1,85 +1,156 @@
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
+<html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MASAH | Manufacturas Sahagún</title>
-  <meta name="description" content="Empresa mexicana dedicada a la fabricación de muebles estilo industrial. Catálogo, contacto y más." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mansah | Manufacturas Sahagún</title>
   <style>
     :root {
-      --rojo: #e50914;
-      --gris-oscuro: #111827;
-      --gris-claro: #9ca3af;
+      --rojo-bandera: #a50021;
+      --gris-oscuro: #1c1c1c;
+      --gris-claro: #e5e5e5;
       --blanco: #ffffff;
     }
+
     body {
       margin: 0;
-      font-family: system-ui, sans-serif;
-      color: var(--blanco);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: var(--gris-oscuro);
+      color: var(--gris-claro);
+      line-height: 1.6;
     }
-    header {background: #0b0f1a; padding: 1rem; position: sticky; top: 0;}
-    header h1 {margin: 0; color: var(--rojo);} 
-    header small {color: var(--gris-claro);} 
-    nav {margin-top: .5rem;}
-    nav a {margin-right: 1rem; color: var(--blanco); text-decoration: none;}
-    section {padding: 2rem 1rem;}
-    h2 {color: var(--rojo);}
-    .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;}
-    figure {background: #1f2937; border-radius: 8px; overflow: hidden;}
-    figcaption {padding: .5rem; font-size: .9rem; color: var(--gris-claro);}
-    img {width: 100%; display: block;}
-    footer {background: #0b0f1a; padding: 1rem; text-align: center; color: var(--gris-claro);}
+
+    header {
+      background: var(--rojo-bandera);
+      color: var(--blanco);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    header small {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--gris-claro);
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--rojo-bandera);
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    figure {
+      background: #2a2a2a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+
+    figure:hover {
+      transform: scale(1.03);
+    }
+
+    figure img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    figcaption {
+      padding: 0.8rem;
+      text-align: center;
+      font-size: 1rem;
+      background: #1f1f1f;
+    }
+
+    footer {
+      background: #0f0f0f;
+      color: var(--gris-claro);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: var(--rojo-bandera);
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>MASAH</h1>
+    <h1>Mansah</h1>
     <small>Manufacturas Sahagún</small>
-    <nav>
-      <a href="#catalogo">Ver catálogo</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Empresa mexicana</h2>
-      <p>MASAH — Manufacturas Sahagún — es una empresa mexicana dedicada a la fabricación de muebles estilo industrial. Diseñamos y producimos piezas robustas y funcionales, con acabados profesionales que elevan cualquier espacio.</p>
-    </section>
+  <section>
+    <h2>Sobre nosotros</h2>
+    <p>Somos una empresa mexicana dedicada al <strong>diseño y fabricación de muebles a medida</strong> y con diseños especiales. <br><em>SOMOS ARTESANOS DEL METAL.</em></p>
+  </section>
 
-    <section id="catalogo">
-      <h2>Catálogo — Estilo industrial</h2>
-      <div class="grid">
-        <figure>
-          <img src="mesa ind.jpg" alt="Comedor estilo industrial">
-          <figcaption>Comedor industrial</figcaption>
-        </figure>
-        <figure>
-          <img src="0eee84740fcd1f2aa7ef4d815bc86d1b.jpg" alt="Mesa de lectura">
-          <figcaption>Mesa de lectura</figcaption>
-        </figure>
-        <figure>
-          <img src="5e3374eb2d01edff4666044e9d973d36.jpg" alt="Fogatero de diseño">
-          <figcaption>Mueble para botellas</figcaption>
-        </figure>
-        <figure>
-          <img src="81df20239fc0adf297c27a257716cf99.jpg" alt="Estantería estilo industrial">
-          <figcaption>Estantería industrial</figcaption>
-        </figure>
-      </div>
-    </section>
+  <section>
+    <h2>Nuestros proyectos</h2>
+    <div class="galeria">
+      <figure>
+        <img src="comedor.jpg" alt="Comedor estilo industrial">
+        <figcaption>Comedor estilo industrial</figcaption>
+      </figure>
+      <figure>
+        <img src="fogatero.jpg" alt="Fogatero de diseño">
+        <figcaption>Fogatero de diseño</figcaption>
+      </figure>
+      <figure>
+        <img src="mesa-lectura.jpg" alt="Mesa de lectura">
+        <figcaption>Mesa de lectura</figcaption>
+      </figure>
+      <figure>
+        <img src="bancas-jardin.jpg" alt="Bancas de jardín">
+        <figcaption>Bancas de jardín</figcaption>
+      </figure>
+      <figure>
+        <img src="decoracion.jpg" alt="Decoración de interiores y exteriores">
+        <figcaption>Decoración de interiores y exteriores</figcaption>
+      </figure>
+    </div>
+  </section>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>¿Tienes un proyecto? Escríbenos o llámanos:</p>
-      <p><strong>Correo:</strong> <a href="mailto:mansah.sa25@gmail.com">mansah.sa25@gmail.com</a></p>
-      <p><strong>Teléfono:</strong> <a href="tel:+527731220062">+52 773 122 0062</a></p>
-    </section>
-  </main>
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p><strong>Correo:</strong> <a href="mailto:mansah.sa25@gmail.com">mansah.sa25@gmail.com</a></p>
+    <p><strong>Teléfono:</strong> <a href="tel:+527731220062">+52 773 122 0062</a></p>
+  </section>
 
   <footer>
-    © <span id="year"></span> MASAH — Manufacturas Sahagún. Todos los derechos reservados.
+    © <span id="year"></span> Mansah — Manufacturas Sahagún. Todos los derechos reservados.
   </footer>
 
   <script>

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mansah | Manufacturas Sahagún</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
       --rojo-bandera: #a50021;
@@ -15,16 +16,23 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--gris-oscuro);
+      background: var(--gris-oscuro) url("fondo.jpg") no-repeat center center fixed;
+      background-size: cover;
       color: var(--gris-claro);
       line-height: 1.6;
     }
 
     header {
-      background: var(--rojo-bandera);
+      background: rgba(165, 0, 33, 0.9); /* Rojo bandera con transparencia */
       color: var(--blanco);
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
+    }
+
+    header img {
+      max-width: 120px;
+      display: block;
+      margin: 0 auto 1rem auto;
     }
 
     header h1 {
@@ -45,6 +53,9 @@
       padding: 2rem;
       max-width: 1200px;
       margin: auto;
+      background: rgba(28, 28, 28, 0.85);
+      border-radius: 12px;
+      margin-bottom: 2rem;
     }
 
     h2 {
@@ -92,12 +103,26 @@
     }
 
     footer {
-      background: #0f0f0f;
+      background: rgba(15, 15, 15, 0.9);
       color: var(--gris-claro);
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 1.5rem 1rem;
       font-size: 0.9rem;
+    }
+
+    .social-icons {
+      margin: 1rem 0;
+    }
+
+    .social-icons a {
+      color: var(--blanco);
+      font-size: 1.8rem;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: var(--rojo-bandera);
     }
 
     a {
@@ -108,6 +133,7 @@
 </head>
 <body>
   <header>
+    <img src="logo.png" alt="Logo Mansah">
     <h1>Mansah</h1>
     <small>Manufacturas Sahagún</small>
   </header>
@@ -150,6 +176,11 @@
   </section>
 
   <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=100028388808824&sk=about" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="instagram.com/mans.ah01" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/527731220062" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
     © <span id="year"></span> Mansah — Manufacturas Sahagún. Todos los derechos reservados.
   </footer>
 
@@ -158,4 +189,3 @@
   </script>
 </body>
 </html>
-
